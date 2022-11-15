@@ -1,8 +1,42 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "./reset.css";
+
+:root {
+--lavender-blush: #f6e8eaff;
+--fiery-rose: #ef626cff;
+--raisin-black: #22181cff;
+--jet: #312f2fff;
+--middle-blue-green: #84dccfff;
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: var(--lavender-blush);
+  padding: 20px;
+  gap: 30px;
+}
+
+body, .messages, .message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages {
+  gap: 25px;
+}
+
+body h1 {
+  font-size: 2rem;
+}
+
+.message {
+  background-color: var(--middle-blue-green);
+  padding: 15px;
+  gap: 10px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 6px var(--raisin-black)
+}
+
+.message h1 {
+  font-size: 1.6rem;
 }
