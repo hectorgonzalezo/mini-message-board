@@ -14,11 +14,12 @@ body {
   gap: 30px;
 }
 
-body, .messages, .message {
+body, .messages, .message, form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
 
 .messages {
@@ -39,4 +40,8 @@ body h1 {
 
 .message h1 {
   font-size: 1.6rem;
+}
+
+label{
+  margin-right: 10px;
 }

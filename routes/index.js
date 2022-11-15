@@ -6,12 +6,12 @@ const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: date.formatDistanceToNow(new Date()),
+    added: new Date(),
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: date.formatDistanceToNow(new Date()),
+    added: new Date(),
   }
 ];
 
@@ -19,5 +19,12 @@ const messages = [
 router.get('/', function(req, res, next) {
   res.render('index', {title: "Mini Messageboard", messages });
 });
+
+router.post('/new', (req, res, next) => {
+  const name = req.body.name;
+  const text = req.body.text;
+  messages.push({text, user: name, added: new Date()})
+  res.redirect('/');
+})
 
 module.exports = router;
