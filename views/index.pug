@@ -5,8 +5,7 @@ block content
   .messages
     each message in messages
       .message
-        h1 #{message.text}
-        p #{message.user}
-        p Added #{message.added}
-  button
-    a(href="/new") Add new Message
+        p #{message.text}
+        hr
+        p Added by <em> #{message.user} </em> #{date.formatDistanceToNow(message.added)} ago
+  a(href="/new") Add new Message
