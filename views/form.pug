@@ -3,8 +3,10 @@ extends layout
 block content
   h1  Create a message
   form(action="/new", method="post")
-    label(for="name") Name: 
-      input(type="text" name="name" placeholder="Name")
-    label(for="text") Text: 
-      textarea( name="text" placeholder="Text")
+    .input-wrapper
+      label(for="name") Name: 
+      input(type="text" name="name" placeholder="Name" required)
+    .input-wrapper
+      label(for="text") Text: 
+      textarea( name="text" placeholder="Text" required)
     input(type="submit")
